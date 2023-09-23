@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ButtonSubmit from "../components/ButtonSubmit.svelte";
+---
+
+<Layout title="Welcome to Corrige mi ingles.">
+  <main class="container max-w-lg m-auto flex flex-col">
+    <header class="py-4">
+		<h1 class="text-3xl text-center">Corrige mi ingles</h1>
+	</header>
+
+    <label class="text-gray-700 " for="name">
+      <textarea
+        
+        class="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+        id="resultado"
+        placeholder="Corrige el texto que escribo en ingles"
+        name="comment"
+        rows="5"
+        cols="40"
+      >
+      </textarea>
+    </label>
+
+    <ButtonSubmit client:load/>
+
+
+  </main>
+</Layout>
+
+<style></style>
